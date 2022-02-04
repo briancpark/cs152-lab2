@@ -167,9 +167,9 @@ verilog: $(sim_vsrcs)
 .PHONY: run-binary run-binary-fast run-binary-debug run-fast
 
 check-binary:
-ifeq (,$(BINARY))
-	$(error BINARY variable is not set. Set it to the simulation binary)
-endif
+# ifeq (,$(BINARY))
+# 	$(error BINARY variable is not set. Set it to the simulation binary)
+# endif
 
 # run normal binary with hardware-logged insn dissassembly
 run-binary: $(output_dir) $(sim) check-binary
