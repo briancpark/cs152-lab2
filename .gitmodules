@@ -143,3 +143,9 @@
 [submodule "lab/open3/riscv-isa-sim"]
 	path = lab/open3/riscv-isa-sim
 	url = https://github.com/riscv/riscv-isa-sim.git
+[submodule "tools/api-config-chipsalliance"]
+	path = tools/api-config-chipsalliance
+	url = https://github.com/chipsalliance/api-config-chipsalliance.git
+[submodule "tools/rocket-dsp-utils"]
+	path = tools/rocket-dsp-utils
+	url = https://github.com/ucb-bar/rocket-dsp-utils
