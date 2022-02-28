@@ -10,18 +10,13 @@
 
 void __attribute__ ((noinline)) transpose(mat_nxm_t dst, const mat_mxn_t src)
 {
-    size_t i, j, l, k;
-    // for (i = 0; i < MAT_M; i++) {
-    //     for (j = 0; j < MAT_N; j++) {
-    //         dst[j][i] = src[i][j];
-    //     }
-    // }
-
-    size_t blocksize = 8;
+    register size_t i, j, l, k;
+    register size_t blocksize = 8;
+    
     for (i = 0; i < MAT_M; i += blocksize) {
-        for (j = 0; j < MAT_N; j += blocksize) {
-            for (k = i; k < min(i + blocksize, MAT_M); ++k) {
-                for (l = j; l < min(j + blocksize, MAT_N); ++l) {
+        for (j = 0; j < MAT_N; j += blocksize) {    
+            for (l = j; l < min(j + blocksize, MAT_N); ++l) {
+                for (k = i; k < min(i + blocksize, MAT_M); ++k) {
                     dst[l][k] = src[k][l];
                 }
             }
