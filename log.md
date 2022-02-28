@@ -67,3 +67,24 @@ load-use interlock : 6324
         I$ blocked : 210
         D$ blocked : 330024
 ```
+
+## 4-way Set Associative Cache Blocked Transpose
+```
+            cycles : 608780
+           instret : 97453
+             loads : 16391
+            stores : 16414
+           I$ miss : 6
+   D$ regular miss : 9202
+  D$ prefetch miss : 0
+        D$ release : 8739
+         ITLB miss : 0
+         DTLB miss : 0
+       L2 TLB miss : 0
+          branches : 21024
+       mispredicts : 5846
+load-use interlock : 8036
+        I$ blocked : 208
+        D$ blocked : 367880
+```
+
