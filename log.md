@@ -88,3 +88,22 @@ load-use interlock : 8036
         D$ blocked : 367880
 ```
 
+## 8-way Set Associative Cache Blocked Transpose
+```
+            cycles : 654365
+           instret : 97453
+             loads : 16391
+            stores : 16414
+           I$ miss : 6
+   D$ regular miss : 10406
+  D$ prefetch miss : 0
+        D$ release : 9037
+         ITLB miss : 0
+         DTLB miss : 0
+       L2 TLB miss : 0
+          branches : 21024
+       mispredicts : 6087
+load-use interlock : 10627
+        I$ blocked : 206
+        D$ blocked : 408643
+```
