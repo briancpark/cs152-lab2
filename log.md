@@ -107,3 +107,27 @@ load-use interlock : 10627
         I$ blocked : 206
         D$ blocked : 408643
 ```
+
+## L2 Cache Blocked Transpose
+```sh
+cd ${TESTDIR} && make -j && cd ${SIMDIR} && make CONFIG=CS152RocketConfig -j4 && make CONFIG=CS152RocketL2Config run-binary-hex BINARY=${TESTDIR}/transpose.riscv
+```
+
+```
+            cycles : 432253
+           instret : 99944
+             loads : 16396
+            stores : 16419
+           I$ miss : 7
+   D$ regular miss : 6968
+  D$ prefetch miss : 0
+        D$ release : 5796
+         ITLB miss : 0
+         DTLB miss : 0
+       L2 TLB miss : 0
+          branches : 21288
+       mispredicts : 6660
+load-use interlock : 3492
+        I$ blocked : 227
+        D$ blocked : 250033
+```
