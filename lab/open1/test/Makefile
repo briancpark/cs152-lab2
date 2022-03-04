@@ -18,7 +18,7 @@ CFLAGS := -O2 -std=gnu11 -Wall
 
 progs_p := $(addsuffix .riscv,$(bmarks_p))
 progs_v := $(addsuffix .riscv,$(bmarks_v))
-srcs :=
+srcs := bmark-asm.S
 
 $(progs_p): CFLAGS += -specs=htif.specs -specs=htif_argv.specs -Wl,--defsym=__heap_size=8M
 $(progs_p): srcs += trap.c

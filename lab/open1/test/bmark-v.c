@@ -3,6 +3,8 @@
  */
 #include <stdio.h>
 
+extern uint64_t adder_func(uint64_t a);
+
 static inline unsigned long get_cycles(void)
 {
     unsigned long cycles;
@@ -13,5 +15,10 @@ static inline unsigned long get_cycles(void)
 int main(void)
 {
     /* TODO: Write your code here */
+    unsigned long start = get_cycles();
+    adder_func(4);
+    unsigned long end  = get_cycles();
+
+    printf("Cycles: %lu\n", end - start);    
     return 0;
 }
