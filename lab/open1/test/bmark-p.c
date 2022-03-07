@@ -19,33 +19,20 @@ static inline unsigned long rdcycle(void)
 
 int main(void)
 {
-    // printf("%d\n", sizeof(int));
-    // int arr[N];
-
-    // register unsigned long lim = 4096;
-    // /* TODO: Write your code here */
-    // register unsigned long start;
-    // register unsigned long end;
-    // start = rdcycle();
-    // for (register int i = 0; i < N; i++) {
-    //     arr[i] = i;
-        
-    //     if (i % lim == 0) {
-    //         end  = rdcycle();
-    //         printf("Cycles: %lu\n", end - start);    
-    //         start  = rdcycle();
-    //     }
-        
-    // }
-
-
-
+    // int a[4000];
+    // int k[4000];
+    // for (int i = 0; i < 4000; i++) a[i] = 100;
 
     // unsigned long start = rdcycle();
-    // ldst(&arr);
+    // for (int i = 0; i < 100; i++) {
+    //     start = rdcycle();
+    //     k[i] = a[i];
+        
+    //     printf("Cycles: %lu\n", rdcycle() - start);
+    // }
     // unsigned long end  = rdcycle();
-    // printf("Cycles: %lu\n", end - start);
-
+    // printf(k);
+    // printf("Cycles: %lu\n", end - start);    
 
 
     // FOR INSTRUCTION STUFF
